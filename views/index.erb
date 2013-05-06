@@ -1,0 +1,66 @@
+
+<h2><legend>tknzk's blog recently entries</legend></h2>
+<ul>
+<% feed_blog.entries.each { |e| %>
+    <li><a href="<%= e.url %>" target="_blank"><%= e.title %></a>
+    <em class="muted"><%= e.last_updated %></em>
+    </li>
+<% } %>
+</ul>
+
+
+<h2><legend>tknzk's tech log recently entries</legend></h2>
+<ul>
+<% feed_tech.entries.each { |e| %>
+    <li><a href="<%= e.url %>" target="_blank"><%= e.title %></a>
+    <em class="muted"><%= e.last_updated %></em>
+    </li>
+<% } %>
+</ul>
+
+
+<h2><legend>libraries</legend></h2>
+<ul>
+    <li>for PHP
+        <ul>
+            <li><a href="http://openpear.org/package/Services_Bitly" target="_blank">Services_Bitly</a></li>
+            <li><a href="http://openpear.org/package/Services_GoogleChartApiQR" target="_blank">Services_GoogleChartApiQR</a></li>
+            <li><a href="http://openpear.org/package/Services_Calil" target="_blank">Services_Calil</a></li>
+            <li><a href="http://openpear.org/package/Services_Thanks" target="_blank">Services_Thanks</a></li>
+        </ul>
+    </li>
+</ul>
+
+<%
+# <h2><legend>service</legend></h2>
+# <ul>
+#     <li><a href="/qr_code">QRCode for iPhone</a></li>
+# </ul>
+%>
+
+
+<div class="footer">
+<h2><legend>Contact Me</legend></h2>
+<address>
+  <strong><u>Takumi Kanzaki</u></strong><br>
+    <ul class="unstyled">
+        <li>
+            <span class="icon-envelope-alt"></span>
+            <a href="&#109;&#97;i&#108;t&#111;&#58;&#105;nfo&#64;&#116;&#107;n&#122;k.co&#109;">i&#110;fo&#64;t&#107;n&#122;k&#46;&#99;&#111;&#109;</a>
+        </li>
+        <li>
+            <span class="icon-facebook"></span>
+            <a href="http://www.facebook.com/tknzk" target="_blank">Takumi Kanzaki</a>
+        </li>
+        <li>
+            <span class="icon-twitter"></span>
+            <a href="https://www.twitter.com/tknzk" target="_blank">@tknzk</a>
+        </li>
+        <li>
+            <span class="icon-github"></span>
+            <a href="https://www.github.com/tknzk" target="_blank">tknzk</a>
+        </li>
+    </ul>
+</address>
+</div>
+

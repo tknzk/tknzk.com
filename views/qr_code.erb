@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+<title>QRCode for iPhone</title>
+<link href="css/qr_code.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="js/qr_code.js"></script>
+</head>
+<body >
+<h1>QRCode for iPhone</h1>
+
+<div class="polaroid" style="width:250px;">
+<img id="qrimg">
+<div id="msg"></div>
+</div>
+
+
+<div class="polaroid" style="width:250px;">
+<table>
+  <tbody>
+
+    <tr>
+      <td align="right">QR</td>
+      <td>
+        <input type="submit" value="Display" onclick="draw_qrcode()" class="formbtn">
+        <input type="hidden" id="qrurl" type="text" size="30" onclick="this.select()"><br>
+      </td>
+    </tr>
+
+    <tr >
+      <td align="right"></td>
+      <td>
+      <select id="cari" onchange="draw_qrcode()" class="formtext">
+        <option checked="">docomo</option>
+        <option>softbank</option>
+        <option>au</option>
+      </td>
+    </tr>
+
+    <tr>
+      <td align="right">姓</td>
+      <td>
+        <input id="qrname_sei" size="10" value="" class="formtext" />
+      </td>
+    </tr>
+
+    <tr>
+      <td align="right">名</td>
+      <td>
+        <input id="qrname_mei" size="10" value="" class="formtext" />
+      </td>
+    </tr>
+
+    <tr>
+      <td align="right">TEL</td>
+      <td>
+        <input id="qrtel" size="15" value="" class="formtext" />
+      </td>
+    </tr>
+
+    <tr>
+      <td align="right">MMS</td>
+      <td>
+        <input id="qrmms" size="6" value="" class="formtext" />@softbank.ne.jp
+      </td>
+    </tr>
+
+    <tr>
+      <td align="right">SMS</td>
+      <td>
+        <input id="qrsms" size="6" value="" class="formtext" />@i.softbank.jp
+      </td>
+    </tr>
+
+    <tr>
+      <td align="right">DB</td>
+      <td>
+        <!--input type="submit" value="ReadDB" onclick="readDB()"-->
+        <input type="submit" value="Save" onclick="saveDB()" class="formbtn">
+        <input type="submit" value="Delete" onclick="deleteDB()" class="formbtn">
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+</div>
+
+<div class="info">
+* QRコードは株式会社デンソーウェーブの登録商標です
+</div>
+
+
+<!-- google analytis -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-369971-4");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+
+
+
+
+</body>
+</html>
+
