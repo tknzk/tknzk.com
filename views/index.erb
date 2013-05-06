@@ -1,32 +1,32 @@
 
 <h2><legend>tknzk's blog recently entries</legend></h2>
-<ul>
+<ul class="icons">
 <% feed_blog.entries.each { |e| %>
-    <li><a href="<%= e.url %>" target="_blank"><%= e.title %></a>
-    <em class="muted"><%= e.last_updated %></em>
+    <li><i class="icon-ok"></i><a href="<%= e.url %>" target="_blank"><%= e.title %></a>
+    <em class="muted"><%= e.last_updated.strftime("%Y-%m-%d %H:%M:%S %Z") %></em>
     </li>
 <% } %>
 </ul>
 
 
 <h2><legend>tknzk's tech log recently entries</legend></h2>
-<ul>
+<ul class="icons">
 <% feed_tech.entries.each { |e| %>
-    <li><a href="<%= e.url %>" target="_blank"><%= e.title %></a>
-    <em class="muted"><%= e.last_updated %></em>
+    <li><i class="icon-ok"></i><a href="<%= e.url %>" target="_blank"><%= e.title %></a>
+    <em class="muted"><%= e.last_updated.strftime("%Y-%m-%d %H:%M:%S %Z") %></em>
     </li>
 <% } %>
 </ul>
 
 
 <h2><legend>libraries</legend></h2>
-<ul>
-    <li>for PHP
-        <ul>
-            <li><a href="http://openpear.org/package/Services_Bitly" target="_blank">Services_Bitly</a></li>
-            <li><a href="http://openpear.org/package/Services_GoogleChartApiQR" target="_blank">Services_GoogleChartApiQR</a></li>
-            <li><a href="http://openpear.org/package/Services_Calil" target="_blank">Services_Calil</a></li>
-            <li><a href="http://openpear.org/package/Services_Thanks" target="_blank">Services_Thanks</a></li>
+<ul class="icons">
+    <li><i class="icon-bookmark"></i>for PHP
+        <ul class="icons">
+            <li><i class="icon-ok"></i><a href="http://openpear.org/package/Services_Bitly" target="_blank">Services_Bitly</a></li>
+            <li><i class="icon-ok"></i><a href="http://openpear.org/package/Services_GoogleChartApiQR" target="_blank">Services_GoogleChartApiQR</a></li>
+            <li><i class="icon-ok"></i><a href="http://openpear.org/package/Services_Calil" target="_blank">Services_Calil</a></li>
+            <li><i class="icon-ok"></i><a href="http://openpear.org/package/Services_Thanks" target="_blank">Services_Thanks</a></li>
         </ul>
     </li>
 </ul>
