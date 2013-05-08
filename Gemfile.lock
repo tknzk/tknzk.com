@@ -5,6 +5,7 @@ GEM
       hpricot (>= 0.6)
       simple-rss (>= 1.1)
     hpricot (0.8.6)
+    newrelic_rpm (3.6.1.88)
     rack (1.5.2)
     rack-protection (1.5.0)
       rack
@@ -20,4 +21,5 @@ PLATFORMS
 
 DEPENDENCIES
   feed-normalizer
+  newrelic_rpm
   sinatra
