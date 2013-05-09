@@ -4,9 +4,9 @@ require 'feed-normalizer'
 require 'sinatra'
 require 'open-uri'
 
-configure :production do
+#configure :production do
     require 'newrelic_rpm'
-end
+#end
 
 get '/' do
 
