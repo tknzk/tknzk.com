@@ -29,6 +29,3 @@ get '/' do
 
 end
 
-get '/qr_code' do
-    erb :qr_code, layout: false
-end
