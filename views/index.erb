@@ -1,18 +1,18 @@
 
 <h2><legend>tknzk's blog recently entries</legend></h2>
-<ul class="icons">
+<ul class="list-unstyled">
 <% feed_blog.entries.each { |e| %>
-    <li><i class="icon-ok"></i><a href="<%= e.url %>" target="_blank"><%= e.title %></a>
-    <em class="muted"><%= e.last_updated.strftime("%Y-%m-%d %H:%M:%S %Z") %></em>
+    <li><i class="glyphicon glyphicon-ok icon"></i><a href="<%= e.url %>" target="_blank"><%= e.title %></a>
+        <em class="muted"><%= e.last_updated.strftime("%Y-%m-%d %H:%M:%S %Z") %></em>
     </li>
 <% } %>
 </ul>
 
 
 <h2><legend>tknzk's tech log recently entries</legend></h2>
-<ul class="icons">
+<ul class="list-unstyled">
 <% feed_tech.entries.each { |e| %>
-    <li><i class="icon-ok"></i><a href="<%= e.url %>" target="_blank"><%= e.title %></a>
+    <li><i class="glyphicon glyphicon-ok icon"></i><a href="<%= e.url %>" target="_blank"><%= e.title %></a>
     <em class="muted"><%= e.last_updated.strftime("%Y-%m-%d %H:%M:%S %Z") %></em>
     </li>
 <% } %>
@@ -20,59 +20,66 @@
 
 
 <h2><legend>libraries</legend></h2>
-<ul class="icons">
-    <li><i class="icon-bookmark"></i>for PHP
-        <ul class="icons">
-            <li><i class="icon-ok"></i><a href="http://openpear.org/package/Services_Bitly" target="_blank">Services_Bitly</a></li>
-            <li><i class="icon-ok"></i><a href="http://openpear.org/package/Services_GoogleChartApiQR" target="_blank">Services_GoogleChartApiQR</a></li>
-            <li><i class="icon-ok"></i><a href="http://openpear.org/package/Services_Calil" target="_blank">Services_Calil</a></li>
-            <li><i class="icon-ok"></i><a href="http://openpear.org/package/Services_Thanks" target="_blank">Services_Thanks</a></li>
+<ul class="list-unstyled">
+    <li><i class="glyphicon glyphicon-bookmark icon"></i>for PHP
+        <ul class="list-unstyled" style="padding-left:30px">
+            <li><i class="glyphicon glyphicon-ok icon"></i>
+                <a href="http://openpear.org/package/Services_Bitly" target="_blank">Services_Bitly</a>
+            </li>
+            <li><i class="glyphicon glyphicon-ok icon"></i>
+                <a href="http://openpear.org/package/Services_GoogleChartApiQR" target="_blank">Services_GoogleChartApiQR</a>
+            </li>
+            <li><i class="glyphicon glyphicon-ok icon"></i>
+                <a href="http://openpear.org/package/Services_Calil" target="_blank">Services_Calil</a>
+            </li>
+            <li><i class="glyphicon glyphicon-ok icon"></i>
+                <a href="http://openpear.org/package/Services_Thanks" target="_blank">Services_Thanks</a>
+            </li>
         </ul>
     </li>
 </ul>
 
 
 <h2><legend>skill</legend></h2>
-<ul class="icons">
-    <li>
-    <i class="icon-ok"></i>PHP
-        <ul class="icons">
-            <li><i class="icon-ok"></i>symfony</li>
-            <li><i class="icon-ok"></i>Laravel</li>
-            <li><i class="icon-ok"></i>FuelPHP</li>
+<ul class="list-unstyled">
+    <li><i class="glyphicon glyphicon-ok icon"></i>PHP
+        <ul class="list-unstyled" style="padding-left:30px;">
+            <li><i class="glyphicon glyphicon-ok icon "></i>symfony</li>
+            <li><i class="glyphicon glyphicon-ok icon "></i>Laravel</li>
+            <li><i class="glyphicon glyphicon-ok icon "></i>FuelPHP</li>
         </ul>
     </li>
-    <li><i class="icon-ok"></i>MySQL</li>
-    <li><i class="icon-ok"></i>memcache</li>
-    <li><i class="icon-ok"></i>MongoDB</li>
-    <li><i class="icon-ok"></i>Redis</li>
-    <li><i class="icon-ok"></i>groonga</li>
-    <li><i class="icon-ok"></i>nginx</li>
-    <li><i class="icon-ok"></i>apache</li>
-    <li><i class="icon-ok"></i>fluentd</li>
-    <li><i class="icon-ok"></i>vim</li>
-    <li><i class="icon-ok"></i>Japanese</li>
+    <li><i class="glyphicon glyphicon-ok icon"></i>MySQL</li>
+    <li><i class="glyphicon glyphicon-ok icon"></i>memcache</li>
+    <li><i class="glyphicon glyphicon-ok icon"></i>MongoDB</li>
+    <li><i class="glyphicon glyphicon-ok icon"></i>Redis</li>
+    <li><i class="glyphicon glyphicon-ok icon"></i>groonga</li>
+    <li><i class="glyphicon glyphicon-ok icon"></i>nginx</li>
+    <li><i class="glyphicon glyphicon-ok icon"></i>apache</li>
+    <li><i class="glyphicon glyphicon-ok icon"></i>fluentd</li>
+    <li><i class="glyphicon glyphicon-ok icon"></i>vim</li>
+    <li><i class="glyphicon glyphicon-ok icon"></i>Japanese</li>
 </ul>
 
 <div class="footer">
 <h2><legend>contact me</legend></h2>
 <address>
   <strong><u>Takumi Kanzaki</u></strong><br>
-    <ul class="unstyled">
+    <ul class="list-unstyled">
         <li>
-            <span class="icon-envelope-alt"></span>
+            <i class="fa fa-envelope icon"></i>
             <a href="&#109;&#97;i&#108;t&#111;&#58;&#105;nfo&#64;&#116;&#107;n&#122;k.co&#109;">i&#110;fo&#64;t&#107;n&#122;k&#46;&#99;&#111;&#109;</a>
         </li>
         <li>
-            <span class="icon-facebook"></span>
+            <i class="fa fa-facebook-square icon"></i>
             <a href="http://www.facebook.com/tknzk" target="_blank">Takumi Kanzaki</a>
         </li>
         <li>
-            <span class="icon-twitter"></span>
+            <i class="fa fa-twitter icon"></i>
             <a href="https://www.twitter.com/tknzk" target="_blank">@tknzk</a>
         </li>
         <li>
-            <span class="icon-github"></span>
+            <i class="fa fa-github-square icon"></i>
             <a href="https://www.github.com/tknzk" target="_blank">tknzk</a>
         </li>
     </ul>
