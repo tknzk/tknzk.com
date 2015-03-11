@@ -19,15 +19,6 @@
       %a{href: e.url, target: '_blank'}=e.title
       %em{class: 'muted'}=e.last_updated.strftime('%Y-%m-%d %H:%M:%S %Z')
 
-%h2
-  %legend Tweet
-
-%a{class: 'twitter-timeline', href: 'https://twitter.com/tknzk', lang: 'en', 'data-widget-id' => '575446120563802113'}
-  Tweet by @tknzk
-
-:javascript
-  !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-
 
 %h2
   %legend libraries
@@ -58,6 +49,15 @@
     %li
       %i{class: 'glyphicon glyphicon-ok icon'}
       =w
+
+%h2
+  %legend Tweet
+
+%a{class: 'twitter-timeline', href: 'https://twitter.com/tknzk', lang: 'en', 'data-widget-id' => '575446120563802113'}
+  Tweet by @tknzk
+
+:javascript
+  !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
 
 
 %div{class: 'footer'}
