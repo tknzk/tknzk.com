@@ -4,6 +4,8 @@ GEM
     feed-normalizer (1.5.2)
       hpricot (>= 0.6)
       simple-rss (>= 1.1)
+    haml (4.0.6)
+      tilt
     hpricot (0.8.6)
     newrelic_rpm (3.6.1.88)
     rack (1.5.2)
@@ -21,5 +23,6 @@ PLATFORMS
 
 DEPENDENCIES
   feed-normalizer
+  haml
   newrelic_rpm
   sinatra

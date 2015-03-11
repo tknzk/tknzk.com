@@ -1,0 +1,46 @@
+%html
+  %head
+    %title
+      tknzk.com
+    %meta{charset: 'UTF-8'}/
+    %meta{name: 'viewport', content: 'width=device-width, initial-scale=1.0'}
+    %meta{name: 'description', content: 'tknzk tknzk.com'}
+    %meta{name: 'keyword', content:'tknzk tknzk.com'}
+
+    %meta{property: 'og:title', content: 'tknzk.com'}
+    %meta{property: 'og:type', content: 'website'}
+    %meta{property: 'og:description',content: 'tknzk.com'}
+    %meta{property: 'og:url', content: 'http://tknzk.com'}
+    %meta{property: 'og:image', content: 'http://tknzk.com/img/logo.jpg?_=20130707'}
+    %meta{property: 'og:site_name', content: 'tknzk.com'}
+    %meta{property: 'fb:app_id', content: '315407771925691'}
+    %meta{name: 'google-site-verification',content: 'lFkC0yYx81YJOlLvvqE2TZ3CuKca4UFyfQvwmBP8a68'}
+
+    %link{rel: 'shortcut icon', href: '/favicon.ico?_=20130707'}
+
+    %link{rel: 'stylesheet', href: '//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css'}
+    %link{rel: 'stylesheet', href: '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css'}
+    :css
+      .icon {
+        padding-left: 10px;
+        padding-right: 5px;
+      }
+
+  %body
+    %div{class: "container"}
+      %h1 tknzk.com
+
+      != yield
+
+      %script{src: '//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js'}
+      %script{src: '//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'}
+
+      :javascript
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-56272906-1', 'auto');
+          ga('send', 'pageview');
+
