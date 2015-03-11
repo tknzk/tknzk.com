@@ -44,7 +44,6 @@ get '/' do
     'Parse',
     'hubot',
   ]
-  puts skills
 
   waf = [
     'symfony',
