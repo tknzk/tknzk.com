@@ -24,8 +24,8 @@ get '/' do
   ]
 
   skills = [
-    'PHP',
     'Ruby',
+    'PHP',
     'MySQL',
     'PostgreSQL',
     'DB2',
@@ -38,18 +38,20 @@ get '/' do
     'apache',
     'fluentd',
     'vim',
-    'Japanese',
     'heroku',
     'AWS',
     'Parse',
     'hubot',
+    'Docker',
+    'Japanese',
   ]
 
   waf = [
+    'sinatra',
+    'Ruby on Rails',
     'symfony',
     'Laravel',
     'FuelPHP',
-    'sinatra',
   ]
 
   @feed_blog = feed_blog
@@ -62,4 +64,3 @@ get '/' do
   haml :index
 
 end
-
