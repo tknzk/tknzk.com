@@ -3,8 +3,8 @@ require 'rubygems'
 require 'sinatra'
 require 'haml'
 
+require 'rss'
 require 'open-uri'
-require 'feed-normalizer'
 
 require 'newrelic_rpm'
 
@@ -13,8 +13,8 @@ get '/' do
   uri_blog = 'http://tknzk.hatenablog.jp/feed'
   uri_tech = 'http://tknzk.hateblo.jp/feed'
 
-  feed_blog = FeedNormalizer::FeedNormalizer.parse open(uri_blog)
-  feed_tech = FeedNormalizer::FeedNormalizer.parse open(uri_tech)
+  feed_blog = RSS::Parser.parse(open(uri_blog))
+  feed_tech = RSS::Parser.parse(open(uri_tech))
 
   libralies = [
     {:url => 'http://openpear.org/package/Services_Bitly', :title => 'Services_Bitly'},

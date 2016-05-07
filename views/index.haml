@@ -3,23 +3,23 @@
   %legend tknzk's blog recently entries
 
 %ul{class: 'list-unstyled'}
-  - @feed_blog.entries.each do |e|
+  - @feed_blog.items.each do |e|
     %li
       %i{class: 'glyphicon glyphicon-ok icon'}
-      %a{href: e.url, target: '_blank'}=e.title
-      %img{src:"http://b.hatena.ne.jp/entry/image/"+e.url}
-      %em{class: 'muted'}=e.last_updated.strftime('%Y-%m-%d %H:%M:%S %Z')
+      %a{href: e.link.href, target: '_blank'}=e.title.content
+      %img{src:"http://b.hatena.ne.jp/entry/image/"+e.link.href}
+      %em{class: 'muted'}=e.updated.content.strftime('%Y-%m-%d %H:%M:%S %Z')
 
 %h2
   %legend tknzk's tech log recently entries
 
 %ul{class: 'list-unstyled'}
-  - @feed_tech.entries.each do |e|
+  - @feed_tech.items.each do |e|
     %li
       %i{class: 'glyphicon glyphicon-ok icon'}
-      %a{href: e.url, target: '_blank'}=e.title
-      %img{src:"http://b.hatena.ne.jp/entry/image/"+e.url}
-      %em{class: 'muted'}=e.last_updated.strftime('%Y-%m-%d %H:%M:%S %Z')
+      %a{href: e.link.href, target: '_blank'}=e.title.content
+      %img{src:"http://b.hatena.ne.jp/entry/image/"+e.link.href}
+      %em{class: 'muted'}=e.updated.content.strftime('%Y-%m-%d %H:%M:%S %Z')
 
 
 %h2
