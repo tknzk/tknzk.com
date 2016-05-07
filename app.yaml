@@ -1,7 +1,7 @@
 # [START runtime]
 runtime: ruby
 vm: true
-entrypoint: bundle exec ruby -p 8080 -E production app.rb
+entrypoint: bundle exec ruby app.rb -p $PORT -E production
 # [END runtime]
 
 # [START resources]
