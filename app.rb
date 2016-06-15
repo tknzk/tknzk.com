@@ -60,7 +60,6 @@ get '/' do
   @skills    = skills
   @waf       = waf
 
-  set :haml, :format => :html5
-  haml :index
+  haml :index, :format => :html5
 
 end
