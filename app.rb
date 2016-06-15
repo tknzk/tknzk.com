@@ -9,7 +9,6 @@ require 'open-uri'
 require 'newrelic_rpm'
 
 get '/' do
-
   uri_blog = 'http://tknzk.hatenablog.jp/feed'
   uri_tech = 'http://tknzk.hateblo.jp/feed'
 
@@ -17,10 +16,10 @@ get '/' do
   feed_tech = RSS::Parser.parse(open(uri_tech))
 
   libralies = [
-    {:url => 'http://openpear.org/package/Services_Bitly', :title => 'Services_Bitly'},
-    {:url => 'http://openpear.org/package/Services_GoogleChartApiQR', :title => 'Services_GoogleChartApiQR'},
-    {:url => 'http://openpear.org/package/Services_Calil', :title => 'Services_Calil'},
-    {:url => 'http://openpear.org/package/Services_Thanks', :title => 'Services_Thanks'},
+    { url: 'http://openpear.org/package/Services_Bitly', title: 'Services_Bitly' },
+    { url: 'http://openpear.org/package/Services_GoogleChartApiQR', title: 'Services_GoogleChartApiQR' },
+    { url: 'http://openpear.org/package/Services_Calil', title: 'Services_Calil' },
+    { url: 'http://openpear.org/package/Services_Thanks', title: 'Services_Thanks' }
   ]
 
   skills = [
@@ -43,7 +42,7 @@ get '/' do
     'Parse',
     'hubot',
     'Docker',
-    'Japanese',
+    'Japanese'
   ]
 
   waf = [
@@ -51,7 +50,7 @@ get '/' do
     'Ruby on Rails',
     'symfony',
     'Laravel',
-    'FuelPHP',
+    'FuelPHP'
   ]
 
   @feed_blog = feed_blog
@@ -60,6 +59,5 @@ get '/' do
   @skills    = skills
   @waf       = waf
 
-  haml :index, :format => :html5
-
+  haml :index, format: :html5
 end
