@@ -1,10 +1,9 @@
 source 'https://rubygems.org'
 
-ruby '2.3.1'
+ruby '2.4.1'
 
 gem 'sinatra'
 gem 'haml'
-#gem 'feed-normalizer'
 gem 'newrelic_rpm'
 
 group :development do
