@@ -24,15 +24,10 @@
   %legend libraries
 
 %ul{class: 'list-unstyled'}
-  %li
-    %i{class: 'glyphicon glyphicon-bookmark icon'}
-    for PHP
-
-    %ul{class: "list-unstyled", style: "padding-left:30px"}
-      - @libralies.each do |l|
-        %li
-          %i{class: 'glyphicon glyphicon-ok icon'}
-          %a{href: l[:url], target: "_blank"}=l[:title]
+  - @libralies.each do |l|
+    %li
+      %i{class: 'glyphicon glyphicon-ok icon'}
+      %a{href: l[:url], target: "_blank"}=l[:title]
 
 %h2
   %legend Skill

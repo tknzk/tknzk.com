@@ -16,30 +16,29 @@ get '/' do
   feed_tech = RSS::Parser.parse(open(uri_tech))
 
   libralies = [
-    { url: 'http://openpear.org/package/Services_Bitly', title: 'Services_Bitly' },
-    { url: 'http://openpear.org/package/Services_GoogleChartApiQR', title: 'Services_GoogleChartApiQR' },
-    { url: 'http://openpear.org/package/Services_Calil', title: 'Services_Calil' },
-    { url: 'http://openpear.org/package/Services_Thanks', title: 'Services_Thanks' }
+    { url: 'https://github.com/tknzk/ehproxy', title: 'ehproxy' },
+    { url: 'https://github.com/tknzk/gcf_chatwork', title: 'GCF ChatWork' },
+    { url: 'https://github.com/tknzk/gcf_line_notify', title: 'GCF LINE Notify' },
+    { url: 'https://github.com/tknzk/Services_Bitly', title: 'Services_Bitly' },
+    { url: 'https://github.com/tknzk/Services_GoogleChartApiQR', title: 'Services_GoogleChartApiQR' },
   ]
 
   skills = [
     'Ruby',
     'PHP',
+    'Go',
     'MySQL',
     'PostgreSQL',
-    'DB2',
     'memcache',
     'Redis',
-    'KyotoCabinet/KyotoTycoon',
     'MongoDB',
     'groonga',
     'nginx',
-    'apache',
     'fluentd',
     'vim',
     'heroku',
     'AWS',
-    'Parse',
+    'GCP',
     'hubot',
     'Docker',
     'Japanese'
