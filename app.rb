@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rubygems'
 
 require 'sinatra'
@@ -20,28 +22,28 @@ get '/' do
     { url: 'https://github.com/tknzk/gcf_chatwork', title: 'GCF ChatWork' },
     { url: 'https://github.com/tknzk/gcf_line_notify', title: 'GCF LINE Notify' },
     { url: 'https://github.com/tknzk/Services_Bitly', title: 'Services_Bitly' },
-    { url: 'https://github.com/tknzk/Services_GoogleChartApiQR', title: 'Services_GoogleChartApiQR' },
+    { url: 'https://github.com/tknzk/Services_GoogleChartApiQR', title: 'Services_GoogleChartApiQR' }
   ]
 
-  skills = [
-    'Ruby',
-    'PHP',
-    'Go',
-    'MySQL',
-    'PostgreSQL',
-    'memcache',
-    'Redis',
-    'MongoDB',
-    'groonga',
-    'nginx',
-    'fluentd',
-    'vim',
-    'heroku',
-    'AWS',
-    'GCP',
-    'hubot',
-    'Docker',
-    'Japanese'
+  skills = %w[
+    Ruby
+    PHP
+    Go
+    MySQL
+    PostgreSQL
+    memcache
+    Redis
+    MongoDB
+    groonga
+    nginx
+    fluentd
+    vim
+    heroku
+    AWS
+    GCP
+    hubot
+    Docker
+    Japanese
   ]
 
   waf = [
