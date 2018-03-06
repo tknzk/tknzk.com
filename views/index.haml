@@ -3,7 +3,7 @@
   %legend tknzk's blog recently entries
 
 %ul{class: 'list-unstyled'}
-  - @feed_blog.items.each do |e|
+  - @feed_blog_items.each do |e|
     %li
       %i{class: 'glyphicon glyphicon-ok icon'}
       %a{href: e.link.href, target: '_blank'}=e.title.content
@@ -13,7 +13,7 @@
   %legend tknzk's tech log recently entries
 
 %ul{class: 'list-unstyled'}
-  - @feed_tech.items.each do |e|
+  - @feed_tech_items.each do |e|
     %li
       %i{class: 'glyphicon glyphicon-ok icon'}
       %a{href: e.link.href, target: '_blank'}=e.title.content

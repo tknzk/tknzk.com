@@ -54,8 +54,8 @@ get '/' do
     'FuelPHP'
   ]
 
-  @feed_blog = feed_blog
-  @feed_tech = feed_tech
+  @feed_blog_items = feed_blog.items.slice(0..4)
+  @feed_tech_items = feed_tech.items.slice(0..4)
   @libralies = libralies
   @skills    = skills
   @waf       = waf
