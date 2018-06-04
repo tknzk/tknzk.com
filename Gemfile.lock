@@ -6,7 +6,7 @@ GEM
       temple (>= 0.8.0)
       tilt
     mustermann (1.0.2)
-    newrelic_rpm (5.1.0.344)
+    newrelic_rpm (5.2.0.345)
     parallel (1.12.1)
     parser (2.5.1.0)
       ast (~> 2.4.0)
