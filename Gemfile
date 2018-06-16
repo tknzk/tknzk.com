@@ -10,5 +10,6 @@ gem 'sinatra'
 
 group :development do
   gem 'rubocop'
+  gem 'rufo'
   gem 'shotgun'
 end
