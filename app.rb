@@ -14,8 +14,8 @@ get '/' do
   uri_blog = 'http://tknzk.hatenablog.jp/feed'
   uri_tech = 'http://tknzk.hateblo.jp/feed'
 
-  feed_blog = RSS::Parser.parse(open(uri_blog))
-  feed_tech = RSS::Parser.parse(open(uri_tech))
+  feed_blog = RSS::Parser.parse(OpenURI.open_uri(uri_blog).read, false)
+  feed_tech = RSS::Parser.parse(OpenURI.open_uri(uri_tech).read, false)
 
   libralies = [
     { url: 'https://github.com/tknzk/ehproxy', title: 'ehproxy' },
