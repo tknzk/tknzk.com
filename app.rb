@@ -25,9 +25,9 @@ get '/' do
     { url: 'https://github.com/tknzk/Services_GoogleChartApiQR', title: 'Services_GoogleChartApiQR' }
   ]
 
-  skills = %w[Ruby PHP Go MySQL PostgreSQL memcache Redis MongoDB
-              groonga nginx fluentd vim heroku AWS GCP hubot Docker Japanese]
-  waf = %w[sinatra Ruby on Rails symfony Laravel FuelPHP]
+  skills = %w[Ruby Go MySQL PostgreSQL memcache Redis MongoDB
+              groonga nginx fluentd vim heroku AWS GCP hubot Docker]
+  waf = %w[sinatra RubyonRails]
 
   @feed_blog_items = feed_blog.items.slice(0..4)
   @feed_tech_items = feed_tech.items.slice(0..4)
