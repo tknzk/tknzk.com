@@ -7,7 +7,7 @@ version: 2
       - checkout
       - run: bundle install
       - run: bundle exec rubocop
- workflows:
+workflows:
   version: 2
   test:
     jobs:
