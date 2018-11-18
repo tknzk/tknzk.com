@@ -1,5 +1,6 @@
 version: 2
- jobs:
+
+jobs:
   ruby-2.5:
     docker:
       - image: ruby:2.5.3
@@ -7,6 +8,7 @@ version: 2
       - checkout
       - run: bundle install
       - run: bundle exec rubocop
+
 workflows:
   version: 2
   test:
