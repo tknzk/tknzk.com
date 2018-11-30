@@ -1,6 +1,6 @@
 # [START runtime]
 runtime: ruby
-env: flex
+vm: true
 entrypoint: bundle exec ruby app.rb -p $PORT
 # [END runtime]
 
