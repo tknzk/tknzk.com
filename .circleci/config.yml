@@ -3,7 +3,7 @@ version: 2
 jobs:
   ruby-2.6:
     docker:
-      - image: ruby:2.6.0-preview3
+      - image: ruby:2.6.0
     steps:
       - checkout
       - run: bundle install
