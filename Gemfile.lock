@@ -8,7 +8,7 @@ GEM
     jaro_winkler (1.5.2)
     mustermann (1.0.3)
     newrelic_rpm (5.7.0.350)
-    parallel (1.12.1)
+    parallel (1.13.0)
     parser (2.6.0.0)
       ast (~> 2.4.0)
     powerpack (0.1.2)
@@ -16,7 +16,7 @@ GEM
     rack-protection (2.0.5)
       rack
     rainbow (3.0.0)
-    rubocop (0.63.0)
+    rubocop (0.63.1)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
       parser (>= 2.5, != 2.5.1.1)
