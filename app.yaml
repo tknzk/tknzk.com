@@ -1,6 +1,6 @@
 # [START runtime]
 runtime: ruby
-vm: true
+env: flex
 entrypoint: bundle exec ruby app.rb -p $PORT
 # [END runtime]
 
@@ -13,7 +13,7 @@ entrypoint: bundle exec ruby app.rb -p $PORT
 
 automatic_scaling:
   min_num_instances: 1
-  max_num_instances: 2
+  max_num_instances: 1
   cool_down_period_sec: 60
   cpu_utilization:
     target_utilization: 0.5
