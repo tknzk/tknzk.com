@@ -2,7 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     ast (2.4.0)
-    haml (5.1.1)
+    haml (5.1.2)
       temple (>= 0.8.0)
       tilt
     jaro_winkler (1.5.3)
