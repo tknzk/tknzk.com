@@ -1,22 +1,22 @@
 # [START runtime]
-runtime: ruby
-env: flex
+runtime: ruby25
 entrypoint: bundle exec ruby app.rb -p $PORT
 # [END runtime]
 
 # [START resources]
+instance_class: F2
 #resources:
 #  cpu: .5
 #  memory_gb: 1.3
 #  disk_size_gb: 10
 ## [END resources]
 
-automatic_scaling:
-  min_num_instances: 1
-  max_num_instances: 1
-  cool_down_period_sec: 60
-  cpu_utilization:
-    target_utilization: 0.5
+# automatic_scaling:
+#   min_num_instances: 1
+#   max_num_instances: 1
+#   cool_down_period_sec: 60
+#   cpu_utilization:
+#     target_utilization: 0.5
 
 handlers:
 - url: /.*
