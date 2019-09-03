@@ -2,7 +2,7 @@
 
 source 'https://rubygems.org'
 
-ruby '2.5.6'
+ruby '2.5.5'
 
 gem 'haml'
 gem 'newrelic_rpm'

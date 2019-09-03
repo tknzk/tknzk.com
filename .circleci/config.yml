@@ -10,7 +10,7 @@ jobs:
       - run: bundle exec rubocop
   ruby-2.5:
     docker:
-      - image: ruby:2.5.6
+      - image: ruby:2.5.5
     steps:
       - checkout
       - run: bundle install
