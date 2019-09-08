@@ -1,88 +1,69 @@
-
-%h2
-  %legend tknzk's blog recently entries
-
-%ul{class: 'list-unstyled'}
-  - @feed_blog_items.each do |e|
-    %li
-      %i{class: 'fal fa-edit'}
-      %a{href: e.link.href, target: '_blank'}=e.title.content
-      %em{class: 'muted'}=e.updated.content.strftime('%Y-%m-%d %H:%M:%S %Z')
-
-%h2
-  %legend tknzk's tech log recently entries
-
-%ul{class: 'list-unstyled'}
-  - @feed_tech_items.each do |e|
-    %li
-      %i{class: 'fal fa-edit'}
-      %a{href: e.link.href, target: '_blank'}=e.title.content
-      %em{class: 'muted'}=e.updated.content.strftime('%Y-%m-%d %H:%M:%S %Z')
+%div{class: 'mt-4'}
+  %ul{class: 'nav nav-pills'}
+    %li{class: 'nav-item'}
+      %a{href: '/', class: 'nav-link active'}
+        tknzk.com
+    %li{class: 'nav-item'}
+      %a{href: 'http://tknzk.hatenablog.jp/', class: 'nav-link', target: '_blank'}
+        tkknzk's blog
+    %li{class: 'nav-item'}
+      %a{href: '//tknzk.hateblo.jp/', class: 'nav-link', target: '_blank'}
+        tknzk's tech blog
+    %li{class: 'nav-item'}
+      %a{href: 'https://github.com/tknzk/CV', class: 'nav-link', target: '_blank'}
+        curriculum vitae
 
 
-%h2
-  %legend libraries
-
-%ul{class: 'list-unstyled'}
-  - @libralies.each do |l|
-    %li
-      %i{class: 'far fa-code'}
-      %a{href: l[:url], target: "_blank"}=l[:title]
-
-%h2
-  %legend Skill
-
-%ul{class: 'list-unstyled'}
-  - @skills.each do |s|
-    %li
-      %i{class: 'far fa-check'}
-      =s
-%hr
-
-%ul{class: 'list-unstyled'}
-  - @waf.each do |w|
-    %li
-      %i{class: 'far fa-check'}
-      =w
-
-%h2
-  %legend Tweet
-
-%a{class: 'twitter-timeline', href: 'https://twitter.com/tknzk', lang: 'en', 'data-widget-id' => '575446120563802113'}
-  Tweet by @tknzk
-
-:javascript
-  !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-
-
-%div{class: 'footer'}
+%div{class: 'mt-5'}
   %h2
-    %legend Contact Me
-  %address
-    %strong
-      %u Takumi Kanzaki
+    About Me
 
-    %ul{class: 'list-unstyled'}
-      %li
-        %i{class: "far fa-envelope"}
-        %span
-          &nbsp;i&#110;fo&#64;t&#107;n&#122;k&#46;&#99;&#111;&#109;
+  %div{class: 'container'}
+    %div{class: 'row'}
+      %div{class: 'col-sm'}
+        %span{class: 'font-weight-bold text-lg'}
+          %u Takumi Kanzaki
+        %br
+        %span{class: 'text-muted'}
+          Software engineer
 
-      %li
-        %i{class: "fab fa-facebook-square"}
-        %a{href: "https://www.facebook.com/tknzk", target:"_blank" }
-          Takumi Kanzaki
-      %li
-        %i{class: "fab fa-twitter"}
-        %a{href: "https://www.twitter.com/tknzk",target: "_blank"}
-          @tknzk
-      %li
-        %i{class: "fab fa-github-square"}
-        %a{href: "https://www.github.com/tknzk",target:"_blank"}
-          tknzk
-      %li
-        %i{class: "fal fa-address-card"}
-        %a{href: "https://www.github.com/tknzk/CV",target:"_blank"}
-          curriculum vitae
+        %ul{class: 'list-unstyled'}
+          %li
+            %i{class: "far fa-envelope"}
+            %span
+              &nbsp;i&#110;fo&#64;t&#107;n&#122;k&#46;&#99;&#111;&#109;
+
+          %li
+            %i{class: "fab fa-facebook-square"}
+            %a{href: "https://www.facebook.com/tknzk", target:"_blank" }
+              Takumi Kanzaki
+          %li
+            %i{class: "fab fa-twitter"}
+            %a{href: "https://www.twitter.com/tknzk",target: "_blank"}
+              @tknzk
+          %li
+            %i{class: "fab fa-github-square"}
+            %a{href: "https://www.github.com/tknzk",target:"_blank"}
+              tknzk
+          %li
+            %i{class: "fab fa-speaker-deck"}
+            %a{href: "https://speakerdeck.com/tknzk",target:"_blank"}
+              Speaker Deck
+
+      %div{class: 'col-sm'}
+        %legend libraries
+
+        %ul{class: 'list-unstyled'}
+          - @libralies.each do |l|
+            %li
+              %i{class: 'far fa-code'}
+              %a{href: l[:url], target: "_blank"}=l[:title]
+
+%footer{class: 'footer mt-auto py-3'}
+  %div{class: 'container'}
+    %span{class: 'text-muted'}
+      Copyright
+      %i{class: 'far fa-copyright'}
+      2019 by tknzk
 
 

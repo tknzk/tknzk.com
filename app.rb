@@ -1,22 +1,10 @@
 # frozen_string_literal: true
 
 require 'rubygems'
-
 require 'sinatra'
 require 'haml'
 
-require 'rss'
-require 'open-uri'
-
-require 'newrelic_rpm'
-
 get '/' do
-  uri_blog = 'http://tknzk.hatenablog.jp/feed'
-  uri_tech = 'http://tknzk.hateblo.jp/feed'
-
-  feed_blog = RSS::Parser.parse(OpenURI.open_uri(uri_blog).read, false)
-  feed_tech = RSS::Parser.parse(OpenURI.open_uri(uri_tech).read, false)
-
   libralies = [
     { url: 'https://github.com/tknzk/ehproxy', title: 'ehproxy' },
     { url: 'https://github.com/tknzk/gcf_chatwork', title: 'GCF ChatWork' },
@@ -25,15 +13,7 @@ get '/' do
     { url: 'https://github.com/tknzk/Services_GoogleChartApiQR', title: 'Services_GoogleChartApiQR' }
   ]
 
-  skills = %w[Ruby Go MySQL PostgreSQL memcache Redis MongoDB
-              groonga nginx fluentd vim heroku AWS GCP hubot Docker]
-  waf = %w[sinatra RubyonRails]
-
-  @feed_blog_items = feed_blog.items.slice(0..4)
-  @feed_tech_items = feed_tech.items.slice(0..4)
   @libralies = libralies
-  @skills    = skills
-  @waf       = waf
 
   haml :index, format: :html5
 end
