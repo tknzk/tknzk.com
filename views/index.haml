@@ -1,7 +1,7 @@
 %div{class: 'mt-4'}
   %ul{class: 'nav nav-pills'}
     %li{class: 'nav-item'}
-      %a{href: '/', class: 'nav-link active'}
+      %a{href: '/', class: 'nav-link '}
         tknzk.com
     %li{class: 'nav-item'}
       %a{href: 'http://tknzk.hatenablog.jp/', class: 'nav-link', target: '_blank'}
@@ -29,43 +29,44 @@
 
         %ul{class: 'list-unstyled'}
           %li
-            %i{class: "far fa-envelope"}
+            %i{class: 'far fa-envelope'}
             %span
               &nbsp;i&#110;fo&#64;t&#107;n&#122;k&#46;&#99;&#111;&#109;
 
           %li
-            %i{class: "fab fa-facebook-square"}
-            %a{href: "https://www.facebook.com/tknzk", target:"_blank" }
-              Takumi Kanzaki
+            %i{class: 'fab fa-facebook-square'}
+            %a{href: 'https://www.facebook.com/tknzk', target:'_blank' }
+              Facebook
           %li
-            %i{class: "fab fa-twitter"}
-            %a{href: "https://www.twitter.com/tknzk",target: "_blank"}
-              @tknzk
+            %i{class: 'fab fa-twitter'}
+            %a{href: 'https://www.twitter.com/tknzk',target: '_blank'}
+              Twitter
           %li
-            %i{class: "fab fa-github-square"}
-            %a{href: "https://www.github.com/tknzk",target:"_blank"}
-              tknzk
+            %i{class: 'fab fa-github-square'}
+            %a{href: 'https://www.github.com/tknzk',target:'_blank'}
+              GitHub
           %li
-            %i{class: "fab fa-speaker-deck"}
-            %a{href: "https://speakerdeck.com/tknzk",target:"_blank"}
+            %i{class: 'fab fa-speaker-deck'}
+            %a{href: 'https://speakerdeck.com/tknzk',target:'_blank'}
               Speaker Deck
 
       %div{class: 'col-sm'}
         %div{class: 'row'}
-          %legend libraries
+          %legend Libraries
 
           %ul{class: 'list-unstyled'}
             - @libralies.each do |l|
               %li
                 %i{class: 'far fa-code'}
-                %a{href: l[:url], target: "_blank"}=l[:title]
+                %a{href: l[:url], target: '_blank'}=l[:title]
 
   %div{class: 'container mt-4'}
     %div{class: 'row'}
-      %img{src: "https://grass-graph.moshimo.works/images/tknzk.png?background=none", class: 'grass-graph-img img-fluid', alt: 'Grass-Graph'}
-      %p{class: "col-12 text-sm-right"}
-        %a{href: "https://grass-graph.moshimo.works", target: "_blank"}
-          Powered by Grass-Graph
+      %img{src: 'https://grass-graph.moshimo.works/images/tknzk.png?background=none', class: 'grass-graph-img img-fluid', alt: 'Grass-Graph'}
+      %p{class: 'col-12 text-sm-right'}
+        Powered by
+        %a{href: 'https://grass-graph.moshimo.works', target: '_blank'}
+          Grass-Graph
 
 %footer{class: 'footer mt-auto py-3'}
   %div{class: 'container'}
