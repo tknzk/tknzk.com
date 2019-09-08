@@ -1,7 +1,10 @@
 /* Custom page CSS
 -------------------------------------------------- */
-/* Not required for template or sticky footer method. */
 
 .footer {
   background-color: #f5f5f5;
+}
+
+.grass-graph-img{
+  width: 100%;
 }
