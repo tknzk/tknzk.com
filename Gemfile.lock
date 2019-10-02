@@ -7,7 +7,7 @@ GEM
       tilt
     jaro_winkler (1.5.3)
     mustermann (1.0.3)
-    newrelic_rpm (6.6.0.358)
+    newrelic_rpm (6.7.0.359)
     parallel (1.17.0)
     parser (2.6.4.1)
       ast (~> 2.4.0)
