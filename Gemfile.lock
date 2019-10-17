@@ -7,7 +7,6 @@ GEM
       tilt
     jaro_winkler (1.5.3)
     mustermann (1.0.3)
-    newrelic_rpm (6.7.0.359)
     parallel (1.18.0)
     parser (2.6.5.0)
       ast (~> 2.4.0)
@@ -41,7 +40,6 @@ PLATFORMS
 
 DEPENDENCIES
   haml
-  newrelic_rpm
   rubocop
   rubocop-performance
   shotgun

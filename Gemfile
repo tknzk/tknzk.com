@@ -5,7 +5,6 @@ source 'https://rubygems.org'
 ruby '2.5.5'
 
 gem 'haml'
-gem 'newrelic_rpm'
 gem 'sinatra'
 
 group :test, :development do
