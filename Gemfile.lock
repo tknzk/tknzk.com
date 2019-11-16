@@ -45,8 +45,5 @@ DEPENDENCIES
   shotgun
   sinatra
 
-RUBY VERSION
-   ruby 2.5.7p206
-
 BUNDLED WITH
    2.0.2
