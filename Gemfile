@@ -2,7 +2,10 @@
 
 source 'https://rubygems.org'
 
-ruby '2.5.7'
+# ruby '2.5.7'
+if (v = ENV['CUSTOM_RUBY_VERSION'])
+  ruby v
+end
 
 gem 'haml'
 gem 'sinatra'
