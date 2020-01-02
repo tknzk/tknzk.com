@@ -7,6 +7,7 @@ require 'haml'
 get '/' do
   libralies = [
     { url: 'https://github.com/tknzk/saml_idp_metadata', title: 'SAML IdP Metadata Parser' },
+    { url: 'https://github.com/tknzk/jpostcode-api', title: 'JPOSTCODE API' },
     { url: 'https://github.com/tknzk/ehproxy', title: 'ehproxy' },
     { url: 'https://github.com/tknzk/gcf_chatwork', title: 'GCF ChatWork' },
     { url: 'https://github.com/tknzk/gcf_line_notify', title: 'GCF LINE Notify' },
