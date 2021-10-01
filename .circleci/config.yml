@@ -2,15 +2,15 @@ version: 2.1
 
 executors:
   working_directory: /root/tknzk-com
+  ruby_3_0:
+    docker:
+      - image: rubylang/ruby:3.0.2-focal
   ruby_2_7:
     docker:
-      - image: rubylang/ruby:2.7.0-bionic
+      - image: rubylang/ruby:2.7.4-bionic
   ruby_2_6:
     docker:
-      - image: rubylang/ruby:2.6.5-bionic
-  ruby_2_5:
-    docker:
-      - image: rubylang/ruby:2.5.7-bionic
+      - image: rubylang/ruby:2.6.8-bionic
 
 commands:
   install_system_dependencies:
@@ -39,6 +39,14 @@ commands:
             bundle exec rubocop
 
 jobs:
+  run_tests_on_ruby_3_0:
+    executor: ruby_3_0
+    steps:
+      - install_system_dependencies
+      - checkout
+      - bundle_gems
+      - run_tests
+
   run_tests_on_ruby_2_7:
     executor: ruby_2_7
     steps:
@@ -55,18 +63,10 @@ jobs:
       - bundle_gems
       - run_tests
 
-  run_tests_on_ruby_2_5:
-    executor: ruby_2_5
-    steps:
-      - install_system_dependencies
-      - checkout
-      - bundle_gems
-      - run_tests
-
 workflows:
   version: 2
   test:
     jobs:
+      - run_tests_on_ruby_3_0
       - run_tests_on_ruby_2_7
       - run_tests_on_ruby_2_6
-      - run_tests_on_ruby_2_5
