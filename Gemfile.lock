@@ -8,9 +8,12 @@ GEM
     json (2.6.2)
     mustermann (2.0.2)
       ruby2_keywords (~> 0.0.1)
+    nio4r (2.5.8)
     parallel (1.22.1)
     parser (3.1.2.1)
       ast (~> 2.4.1)
+    puma (5.6.5)
+      nio4r (~> 2.0)
     rack (2.2.4)
     rack-protection (2.2.2)
       rack
@@ -50,10 +53,11 @@ PLATFORMS
 
 DEPENDENCIES
   haml
+  puma
   rubocop
   rubocop-performance
   shotgun
   sinatra
 
 BUNDLED WITH
-   2.1.4
+   2.3.12

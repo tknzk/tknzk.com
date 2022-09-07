@@ -9,6 +9,7 @@ end
 
 gem 'haml'
 gem 'sinatra'
+gem 'puma'
 
 group :test, :development do
   gem 'rubocop'
