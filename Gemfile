@@ -8,6 +8,7 @@ if (v = ENV['CUSTOM_RUBY_VERSION'])
 end
 
 gem 'haml'
+gem 'puma'
 gem 'sinatra'
 
 group :test, :development do
