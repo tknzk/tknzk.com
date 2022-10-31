@@ -2,7 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     ast (2.4.2)
-    haml (6.0.7)
+    haml (6.0.8)
       temple (>= 0.8.2)
       thor
       tilt
@@ -45,7 +45,7 @@ GEM
       rack (~> 2.2, >= 2.2.4)
       rack-protection (= 3.0.2)
       tilt (~> 2.0)
-    temple (0.8.2)
+    temple (0.9.1)
     thor (1.2.1)
     tilt (2.0.11)
     unicode-display_width (2.3.0)
