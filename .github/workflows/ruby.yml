@@ -20,6 +20,8 @@ jobs:
       - uses: actions/checkout@master
       - name: Build and test
         run: |
+          apt-get -y update
+          apt-get -y install make gcc
           gem install bundler -v 2.3.12 --force
           bundle install
           bundle exec rubocop
