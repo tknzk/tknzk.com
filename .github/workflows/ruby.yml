@@ -12,6 +12,7 @@ jobs:
         - '2.7-dev-bionic'
         - '3.0-dev-focal'
         - '3.1-dev-focal'
+        - '3.2-dev-focal'
     container:
       image: rubylang/ruby:${{ matrix.ruby }}
 
