@@ -2,15 +2,18 @@ version: 2.1
 
 executors:
   working_directory: /root/tknzk-com
+  ruby_3_2:
+    docker:
+      - image: rubylang/ruby:3.2-dev-focal
   ruby_3_1:
     docker:
-      - image: rubylang/ruby:3.1-focal
+      - image: rubylang/ruby:3.1-dev-focal
   ruby_3_0:
     docker:
-      - image: rubylang/ruby:3.0-focal
+      - image: rubylang/ruby:3.0-dev-focal
   ruby_2_7:
     docker:
-      - image: rubylang/ruby:2.7-bionic
+      - image: rubylang/ruby:2.7-dev-bionic
 
 commands:
   install_system_dependencies:
@@ -19,7 +22,7 @@ commands:
       - run:
           name: Install System Dependencies
           # https://circleci.com/docs/2.0/custom-images/#required-tools-for-primary-containers
-          command: apt-get update -y && apt-get install -y ssh make gcc
+          command: apt-get update -y && apt-get install -y ssh
 
   bundle_gems:
     description: "Bundle gems"
@@ -39,6 +42,14 @@ commands:
             bundle exec rubocop
 
 jobs:
+  run_tests_on_ruby_3_2:
+    executor: ruby_3_2
+    steps:
+      - install_system_dependencies
+      - checkout
+      - bundle_gems
+      - run_tests
+
   run_tests_on_ruby_3_1:
     executor: ruby_3_1
     steps:
@@ -67,6 +78,7 @@ workflows:
   version: 2
   test:
     jobs:
+      - run_tests_on_ruby_3_2
       - run_tests_on_ruby_3_1
       - run_tests_on_ruby_3_0
       - run_tests_on_ruby_2_7
