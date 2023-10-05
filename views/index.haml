@@ -31,24 +31,24 @@
 
         %ul{class: 'list-unstyled'}
           %li
-            %i{class: 'far fa-envelope'}
+            %i{class: 'fa-regular fa-envelope'}
             %span
               &nbsp;i&#110;fo&#64;t&#107;n&#122;k&#46;&#99;&#111;&#109;
 
           %li
-            %i{class: 'fab fa-facebook-square'}
+            %i{class: 'fa-brands fa-square-facebook'}
             %a{href: 'https://www.facebook.com/tknzk', target:'_blank' }
               Facebook
           %li
-            %i{class: 'fab fa-twitter'}
+            %i{class: 'fa-brands fa-x-twitter'}
             %a{href: 'https://www.twitter.com/tknzk',target: '_blank'}
-              Twitter
+              X (Twitter)
           %li
-            %i{class: 'fab fa-github-square'}
+            %i{class: 'fa-brands fa-square-github'}
             %a{href: 'https://www.github.com/tknzk',target:'_blank'}
               GitHub
           %li
-            %i{class: 'fab fa-speaker-deck'}
+            %i{class: 'fa-brands fa-speaker-deck'}
             %a{href: 'https://speakerdeck.com/tknzk',target:'_blank'}
               Speaker Deck
 
@@ -59,14 +59,13 @@
           %ul{class: 'list-unstyled'}
             - @libralies.each do |l|
               %li
-                %i{class: 'far fa-code'}
+                %i{class: 'fa-regular fa-code'}
                 %a{href: l[:url], target: '_blank'}=l[:title]
 
 %footer{class: 'footer mt-auto py-3'}
   %div{class: 'container'}
     %span{class: 'text-muted'}
       Copyright
-      %i{class: 'far fa-copyright'}
+      %i{class: 'fa-regular fa-copyright'}
       2019 by tknzk
-
 
