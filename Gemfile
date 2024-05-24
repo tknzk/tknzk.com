@@ -12,7 +12,7 @@ gem 'puma'
 gem 'sinatra', '>= 4.0.0'
 
 group :test, :development do
-  gem 'rubocop'
+  gem 'rubocop', '>= 1.64.0'
   gem 'rubocop-performance'
   gem 'shotgun'
 end
