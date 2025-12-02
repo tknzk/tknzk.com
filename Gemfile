@@ -9,10 +9,11 @@ end
 
 gem 'haml'
 gem 'puma'
+gem 'rackup'
 gem 'sinatra', '>= 4.0.0'
 
 group :test, :development do
+  gem 'rerun'
   gem 'rubocop'
   gem 'rubocop-performance'
-  gem 'shotgun'
 end
