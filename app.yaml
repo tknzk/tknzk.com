@@ -1,5 +1,5 @@
 # [START runtime]
-runtime: ruby32
+runtime: ruby34
 entrypoint: bundle exec ruby app.rb -p $PORT
 # [END runtime]
 
