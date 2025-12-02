@@ -2,15 +2,9 @@ version: 2.1
 
 executors:
   working_directory: /root/tknzk-com
-  ruby_3_2:
+  ruby_3_4:
     docker:
-      - image: rubylang/ruby:3.2-dev-jammy
-  ruby_3_1:
-    docker:
-      - image: rubylang/ruby:3.1-dev-focal
-  ruby_3_0:
-    docker:
-      - image: rubylang/ruby:3.0-dev-focal
+      - image: rubylang/ruby:3.3-dev-jammy
 
 commands:
   install_system_dependencies:
@@ -27,7 +21,7 @@ commands:
       - run:
           name: Bundle gems
           command: |
-            gem install bundler -v 2.4.10 --no-document --force
+            gem install bundler -v 2.6.9 --no-document --force
             bundle install
 
   run_tests:
@@ -39,24 +33,8 @@ commands:
             bundle exec rubocop
 
 jobs:
-  run_tests_on_ruby_3_2:
-    executor: ruby_3_2
-    steps:
-      - install_system_dependencies
-      - checkout
-      - bundle_gems
-      - run_tests
-
-  run_tests_on_ruby_3_1:
-    executor: ruby_3_1
-    steps:
-      - install_system_dependencies
-      - checkout
-      - bundle_gems
-      - run_tests
-
-  run_tests_on_ruby_3_0:
-    executor: ruby_3_0
+  run_tests_on_ruby_3_4:
+    executor: ruby_3_4
     steps:
       - install_system_dependencies
       - checkout
@@ -67,6 +45,4 @@ workflows:
   version: 2
   test:
     jobs:
-      - run_tests_on_ruby_3_2
-      - run_tests_on_ruby_3_1
-      - run_tests_on_ruby_3_0
+      - run_tests_on_ruby_3_4

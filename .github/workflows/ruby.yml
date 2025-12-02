@@ -9,9 +9,7 @@ jobs:
       matrix:
         ruby:
         # https://hub.docker.com/r/rubylang/ruby
-        - '3.0-dev-focal'
-        - '3.1-dev-focal'
-        - '3.2-dev-jammy'
+        - '3.4-dev-jammy'
     container:
       image: rubylang/ruby:${{ matrix.ruby }}
 
@@ -19,6 +17,6 @@ jobs:
       - uses: actions/checkout@master
       - name: Build and test
         run: |
-          gem install bundler -v 2.4.10 --force
+          gem install bundler -v 2.6.9 --force
           bundle install
           bundle exec rubocop
