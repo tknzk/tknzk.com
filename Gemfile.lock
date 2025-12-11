@@ -4,7 +4,7 @@ GEM
     ast (2.4.3)
     base64 (0.3.0)
     ffi (1.17.2)
-    haml (7.0.2)
+    haml (7.1.0)
       temple (>= 0.8.2)
       thor
       tilt
