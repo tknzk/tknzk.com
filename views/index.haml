@@ -1,71 +1,98 @@
-%div{class: 'mt-4'}
-  %ul{class: 'nav nav-pills'}
-    %li{class: 'nav-item'}
-      %a{href: '/', class: 'nav-link border border-dark'}
-        tknzk.com
-    %li{class: 'nav-item'}
-      %a{href: 'https://tknzk.hatenablog.jp/', class: 'nav-link', target: '_blank'}
-        tknzk's blog
-    %li{class: 'nav-item'}
-      %a{href: 'https://tknzk.hateblo.jp/', class: 'nav-link', target: '_blank'}
-        tknzk's tech blog
-    %li{class: 'nav-item'}
-      %a{href: 'https://www.tknzk.app/', class: 'nav-link', target: '_blank'}
-        tknzk Apps
-    %li{class: 'nav-item'}
-      %a{href: 'https://github.com/tknzk/CV', class: 'nav-link', target: '_blank'}
-        CV
+%div.page-wrapper
+  %header.site-header
+    %nav.site-nav{'aria-label': 'Main navigation'}
+      %a.nav-logo{href: '/'}
+        tknzk
+      %div.nav-links
+        %a.nav-link{href: 'https://tknzk.hatenablog.jp/', target: '_blank', rel: 'noopener noreferrer'}
+          Blog
+          %span.sr-only (opens in new tab)
+        %a.nav-link{href: 'https://tknzk.hateblo.jp/', target: '_blank', rel: 'noopener noreferrer'}
+          Tech
+          %span.sr-only (opens in new tab)
+        %a.nav-link{href: 'https://www.tknzk.app/', target: '_blank', rel: 'noopener noreferrer'}
+          Apps
+          %span.sr-only (opens in new tab)
+        %a.nav-link{href: 'https://github.com/tknzk/CV', target: '_blank', rel: 'noopener noreferrer'}
+          CV
+          %span.sr-only (opens in new tab)
 
-%div{class: 'mt-5'}
-  %h2
-    About Me
+  %main
+    %section.hero{'aria-label': 'Introduction'}
+      %div.hero-content
+        %h1.hero-title
+          %span.hero-line.anim-reveal Takumi
+          %span.hero-line.anim-reveal Kanzaki
+        %p.hero-subtitle.anim-reveal
+          Software Engineer
+        %div.hero-accent{'aria-hidden': 'true'}
 
-  %div{class: 'container'}
-    %div{class: 'row'}
-      %div{class: 'col-sm'}
-        %span{class: 'font-weight-bold text-lg'}
-          %u Takumi Kanzaki
-        %br
-        %span{class: 'text-muted'}
-          Software engineer
+    %section.about{'aria-labelledby': 'about-heading'}
+      %div.section-grid
+        %div.section-label.anim-fade
+          %span.label-number{'aria-hidden': 'true'} 01
+          %h2.label-text#about-heading About
 
-        %ul{class: 'list-unstyled'}
-          %li
-            %i{class: 'fa-regular fa-envelope'}
-            %span
-              &nbsp;i&#110;fo&#64;t&#107;n&#122;k&#46;&#99;&#111;&#109;
+        %div.section-content.anim-fade
+          %p.about-text
+            Building software with intention and craft.
+          %div.contact-info
+            %div.contact-item
+              %i.fa-regular.fa-envelope{'aria-hidden': 'true'}
+              %span i&#110;fo&#64;t&#107;n&#122;k&#46;&#99;&#111;&#109;
 
-          %li
-            %i{class: 'fa-brands fa-square-facebook'}
-            %a{href: 'https://www.facebook.com/tknzk', target:'_blank' }
-              Facebook
-          %li
-            %i{class: 'fa-brands fa-x-twitter'}
-            %a{href: 'https://www.twitter.com/tknzk',target: '_blank'}
-              X (Twitter)
-          %li
-            %i{class: 'fa-brands fa-square-github'}
-            %a{href: 'https://www.github.com/tknzk',target:'_blank'}
-              GitHub
-          %li
-            %i{class: 'fa-brands fa-speaker-deck'}
-            %a{href: 'https://speakerdeck.com/tknzk',target:'_blank'}
-              Speaker Deck
+          %div.social-links
+            %a.social-link{href: 'https://www.github.com/tknzk', target: '_blank', rel: 'noopener noreferrer'}
+              %i.fa-brands.fa-square-github{'aria-hidden': 'true'}
+              %span GitHub
+              %span.sr-only (opens in new tab)
+            %a.social-link{href: 'https://www.twitter.com/tknzk', target: '_blank', rel: 'noopener noreferrer'}
+              %i.fa-brands.fa-x-twitter{'aria-hidden': 'true'}
+              %span X
+              %span.sr-only (opens in new tab)
+            %a.social-link{href: 'https://www.facebook.com/tknzk', target: '_blank', rel: 'noopener noreferrer'}
+              %i.fa-brands.fa-square-facebook{'aria-hidden': 'true'}
+              %span Facebook
+              %span.sr-only (opens in new tab)
+            %a.social-link{href: 'https://speakerdeck.com/tknzk', target: '_blank', rel: 'noopener noreferrer'}
+              %i.fa-brands.fa-speaker-deck{'aria-hidden': 'true'}
+              %span Talks
+              %span.sr-only (opens in new tab)
 
-      %div{class: 'col-sm'}
-        %div{class: 'row'}
-          %legend Libraries
+    %section.libraries{'aria-labelledby': 'libraries-heading'}
+      %div.section-grid
+        %div.section-label.anim-fade
+          %span.label-number{'aria-hidden': 'true'} 02
+          %h2.label-text#libraries-heading Libraries
 
-          %ul{class: 'list-unstyled'}
-            - @libralies.each do |l|
-              %li
-                %i{class: 'fa-regular fa-code'}
-                %a{href: l[:url], target: '_blank'}=l[:title]
+        %div.section-content.anim-fade
+          %ul.library-list
+            - @libralies.each_with_index do |l, i|
+              %li.library-item
+                %a.library-link{href: l[:url], target: '_blank', rel: 'noopener noreferrer'}
+                  %span.library-index{'aria-hidden': 'true'}= format('%02d', i + 1)
+                  %span.library-title= l[:title]
+                  %span.library-arrow{'aria-hidden': 'true'} &rarr;
+                  %span.sr-only (opens in new tab)
 
-%footer{class: 'footer mt-auto py-3'}
-  %div{class: 'container'}
-    %span{class: 'text-muted'}
-      Copyright
-      %i{class: 'fa-regular fa-copyright'}
-      2019 by tknzk
+  %footer.site-footer
+    %div.footer-content
+      %span.footer-text &copy; 2019 tknzk
+      %span.footer-dot{'aria-hidden': 'true'} &middot;
+      %span.footer-text Built with care
 
+:javascript
+  document.addEventListener('DOMContentLoaded', function() {
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.anim-reveal, .anim-fade').forEach(function(el) {
+      observer.observe(el);
+    });
+  });

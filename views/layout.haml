@@ -1,49 +1,54 @@
-%html
+!!!
+%html{lang: 'ja'}
   %head
     %title
       tknzk.com
     %meta{charset: 'UTF-8'}/
     %meta{name: 'viewport', content: 'width=device-width, initial-scale=1.0'}
-    %meta{name: 'description', content: 'tknzk tknzk.com'}
-    %meta{name: 'keyword', content:'tknzk tknzk.com'}
+    %meta{name: 'description', content: 'tknzk — Software Engineer'}
+    %meta{name: 'keywords', content: 'tknzk tknzk.com software engineer'}
+    %meta{name: 'theme-color', content: '#111111'}
 
-    %meta{property: 'og:title', content: 'tknzk.com'}
+    %link{rel: 'canonical', href: 'https://www.tknzk.com/'}
+
+    %meta{property: 'og:title', content: 'tknzk.com — Software Engineer'}
     %meta{property: 'og:type', content: 'website'}
-    %meta{property: 'og:description',content: 'tknzk.com'}
-    %meta{property: 'og:url', content: 'https://www.tknzk.com'}
-    %meta{property: 'og:image', content: 'https://www.tknzk.com/img/logo.jpg?_=20130707'}
+    %meta{property: 'og:description', content: 'tknzk — Software Engineer'}
+    %meta{property: 'og:url', content: 'https://www.tknzk.com/'}
+    %meta{property: 'og:image', content: 'https://www.tknzk.com/img/logo.jpg'}
     %meta{property: 'og:site_name', content: 'tknzk.com'}
+    %meta{property: 'og:locale', content: 'ja_JP'}
     %meta{property: 'fb:app_id', content: '315407771925691'}
-    %meta{name: 'google-site-verification',content: 'lFkC0yYx81YJOlLvvqE2TZ3CuKca4UFyfQvwmBP8a68'}
 
-    %link{rel: 'shortcut icon', href: '/favicon.ico?_=20130707'}
+    %meta{name: 'twitter:card', content: 'summary'}
+    %meta{name: 'twitter:site', content: '@tknzk'}
+    %meta{name: 'twitter:title', content: 'tknzk.com — Software Engineer'}
+    %meta{name: 'twitter:description', content: 'tknzk — Software Engineer'}
+    %meta{name: 'twitter:image', content: 'https://www.tknzk.com/img/logo.jpg'}
 
-    %link{rel: 'stylesheet', href: 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css', integrity: 'sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T', crossorigin: 'anonymous'}
-    %link{rel: 'stylesheet', href: '/css/theme.css', crossorigin: 'anonymous'}
-    %link{rel: 'stylesheet', href: '/css/custom.css', crossorigin: 'anonymous'}
-    <!-- Latest compiled and minified CSS -->
+    %meta{name: 'google-site-verification', content: 'lFkC0yYx81YJOlLvvqE2TZ3CuKca4UFyfQvwmBP8a68'}
+
+    %link{rel: 'icon', href: '/favicon.ico'}
+
+    %link{rel: 'preconnect', href: 'https://fonts.googleapis.com'}
+    %link{rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: true}
+    %link{rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Mono:wght@300;400;500&family=Cormorant+Garamond:wght@300;400;600&display=swap'}
 
     %link{rel: 'stylesheet', href: '/css/fontawesome.css'}
     %link{rel: 'stylesheet', href: '/css/regular.css'}
     %link{rel: 'stylesheet', href: '/css/brands.css'}
+    %link{rel: 'stylesheet', href: '/css/custom.css'}
 
     %script{defer: true, src: 'https://stats.tknzk.app/script.js', 'data-website-id': 'ed19f508-c545-4e06-bda6-5476fcff341f'}
 
   %body
-    %div{class: "container"}
+    != yield
 
-      != yield
+    :javascript
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-      %script{src: 'https://code.jquery.com/jquery-3.3.1.slim.min.js', integrity: 'sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo', crossorigin: 'anonymous'}
-      %script{src: 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js', integrity: 'sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1', crossorigin: 'anonymous'}
-      %script{src: 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', integrity: 'sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM', crossorigin: 'anonymous'}
-
-      :javascript
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-          ga('create', 'UA-56272906-1', 'auto');
-          ga('send', 'pageview');
-
+        ga('create', 'UA-56272906-1', 'auto');
+        ga('send', 'pageview');
