@@ -1,19 +1,19 @@
 !!!
-%html{lang: 'ja'}
+%html{lang: 'ja', 'data-theme': 'dark'}
   %head
     %title
       tknzk.com
     %meta{charset: 'UTF-8'}/
     %meta{name: 'viewport', content: 'width=device-width, initial-scale=1.0'}
-    %meta{name: 'description', content: 'tknzk — Software Engineer'}
-    %meta{name: 'keywords', content: 'tknzk tknzk.com software engineer'}
+    %meta{name: 'description', content: 'tknzk — Indie Hacker & Software Engineer. Building tools, APIs, and apps.'}
+    %meta{name: 'keywords', content: 'tknzk tknzk.com indie hacker software engineer'}
     %meta{name: 'theme-color', content: '#111111'}
 
     %link{rel: 'canonical', href: 'https://www.tknzk.com/'}
 
-    %meta{property: 'og:title', content: 'tknzk.com — Software Engineer'}
+    %meta{property: 'og:title', content: 'tknzk — Indie Hacker & Software Engineer'}
     %meta{property: 'og:type', content: 'website'}
-    %meta{property: 'og:description', content: 'tknzk — Software Engineer'}
+    %meta{property: 'og:description', content: 'Building tools, APIs, and apps. Ship fast, iterate often.'}
     %meta{property: 'og:url', content: 'https://www.tknzk.com/'}
     %meta{property: 'og:image', content: 'https://www.tknzk.com/img/logo.jpg'}
     %meta{property: 'og:site_name', content: 'tknzk.com'}
@@ -22,17 +22,27 @@
 
     %meta{name: 'twitter:card', content: 'summary'}
     %meta{name: 'twitter:site', content: '@tknzk'}
-    %meta{name: 'twitter:title', content: 'tknzk.com — Software Engineer'}
-    %meta{name: 'twitter:description', content: 'tknzk — Software Engineer'}
+    %meta{name: 'twitter:title', content: 'tknzk — Indie Hacker & Software Engineer'}
+    %meta{name: 'twitter:description', content: 'Building tools, APIs, and apps. Ship fast, iterate often.'}
     %meta{name: 'twitter:image', content: 'https://www.tknzk.com/img/logo.jpg'}
 
     %meta{name: 'google-site-verification', content: 'lFkC0yYx81YJOlLvvqE2TZ3CuKca4UFyfQvwmBP8a68'}
 
     %link{rel: 'icon', href: '/favicon.ico'}
 
+    :javascript
+      (function() {
+        var saved = localStorage.getItem('theme');
+        if (saved) {
+          document.documentElement.setAttribute('data-theme', saved);
+        } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      })();
+
     %link{rel: 'preconnect', href: 'https://fonts.googleapis.com'}
     %link{rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: true}
-    %link{rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Mono:wght@300;400;500&family=Cormorant+Garamond:wght@300;400;600&display=swap'}
+    %link{rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&family=Inter:wght@400;500;600;700&display=swap'}
 
     %link{rel: 'stylesheet', href: '/css/fontawesome.css'}
     %link{rel: 'stylesheet', href: '/css/regular.css'}
