@@ -4,7 +4,7 @@ GEM
     ast (2.4.3)
     base64 (0.3.0)
     ffi (1.17.2)
-    haml (7.2.0)
+    haml (7.2.2)
       temple (>= 0.8.2)
       thor
       tilt
@@ -72,7 +72,7 @@ GEM
       tilt (~> 2.0)
     temple (0.10.4)
     thor (1.5.0)
-    tilt (2.7.0)
+    tilt (2.8.0)
     unicode-display_width (3.2.0)
       unicode-emoji (~> 4.1)
     unicode-emoji (4.2.0)
